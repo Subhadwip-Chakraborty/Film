@@ -1,0 +1,34 @@
+<div class="conatiner-fluid" >
+    <p class="d-flex justify-content-center" style="font-size: 50px; color:rgb(58, 57, 59);">Update Director Details
+    </p>
+    <hr />
+    <div class="row p-2">
+        <div class="col-3 mt-2"></div>
+        <div class="col-5 mt-2 p-4" style="background-color:rgb(54, 55, 56);">
+            <form [formGroup]="register" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label style="color:rgb(178, 174, 182);">Director's Name</label>
+                    <input type="text" class="form-control" placeholder="Enter the age" formControlName="name"
+                        required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label  style="color:rgb(178, 174, 182);">Director's Age</label>
+                    <input type="number" class="form-control" placeholder="Enter the age" formControlName="age"
+                        required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label style="color:rgb(178, 174, 182);">Award Count of Director</label>
+                    <input type="number" class="form-control" placeholder="Enter the award count"
+                    formControlName="award" required>
+                    <!-- <span class="error" *ngIf="award.hasError('required') && award.touched">Please provide award count</span> -->
+
+                </div>
+                <br>
+                <button class="btn btn-primary" [disabled]="!register.valid">Update</button>
+            </form>
+        </div>
+        <div class="col-4 mt-2"></div>
+    </div>
+</div>

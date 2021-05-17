@@ -1,0 +1,42 @@
+<div class="conatiner-fluid">
+    <p class="d-flex justify-content-center" style="font-size: 50px; color:rgb(30, 30, 31);">Delete Film</p>
+    <hr />
+
+    <div class="row p-2">
+       <div class="col-3"></div>
+        <div class="col-6 ml-4">
+            <form [formGroup]="filmObj" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                   <label><h3> Film Name:</h3></label>
+                    <input type="text" class="form-control" formControlName="name" required>
+                </div>
+                <br>
+                <button class="btn btn-primary">delete</button>
+            </form>
+        </div>
+        <div class="col-3"></div>              
+       
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+      
+        
+            <div class="col-6 mt-4">
+                <ul *ngFor="let film of films">
+                    <li style="list-style: none; border: solid 2px; border-radius: 5px; 
+                    background-color: #757479;" class="p-4">
+                        <h2 style="color:#26156b;" >
+                            {{film.name}}
+                        </h2>
+                        <h4 style="color:#26156b;">Film Rating: {{film.rating}}</h4>
+                        <h3 style="color:#26156b;">Box Office Collection : {{film.boxOfficeCollection}}</h3>
+                        <h4 style="color:#26156b;">Film Director: {{film.director}}</h4>
+                        <h3 style="color:#26156b;">Film Director: {{film.director}}</h3>
+                    </li>
+                </ul>
+           
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+</div>
